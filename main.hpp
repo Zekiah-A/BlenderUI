@@ -6,16 +6,7 @@
 #include "rect.hpp"
 
 class Main
-{   /*
-	public:
-	void draw_rect(float locx, float locy, float sizex, float sizey, float zindex);
-    */
-	public:
-	void draw_button(float locx, float locy);
-
-	public:
-	void draw_checkbox(float locx, float locy, bool ischecked);
-
+{
 	public:
 	void draw_textbox(float locx, float locy);
 };

@@ -3,10 +3,12 @@
 #else
 #include <GL/glut.h>
 #endif
+#include <string>
 #include "main.hpp"
 #include "rect.hpp"
 #include "checkbox.hpp"
 #include "button.hpp"
+#include "textlabel.hpp"
 
 /*
 void Main::draw_toggle(float locx, float locy)
@@ -70,7 +72,7 @@ void render_screen(void) //TODO: Make a struct for vector2's
 	Checkbox *c1 = new Checkbox(0.1, 0, 1, false);
 	Checkbox *c2 = new Checkbox(-0.1, 0, 1, true);
 	
-	program.draw_textbox(0, 0.1);
+	Textlabel *t1 = new Textlabel(0.0, 0.1, 1, "Hello World!");
 
 	glutSwapBuffers();
 }
