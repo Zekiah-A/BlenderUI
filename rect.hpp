@@ -6,16 +6,16 @@
 #else
 #include <GL/glut.h>
 #endif
-#include <string.h>
 
 class Rect
 {
     public:
     Rect(float _locx, float _locy, float _sizex, float _sizey, float _zindex); //this ius supposed to be a constructor, not a class
-    //TODO: add destructor?
+    //~Rect();
+
     void set_position(float _locx, float _locy);
     void set_scale(float _sizex, float _sizey);
-
+    //TODO: these floats don't work
     float locx;
     float locy;
     float sizex;

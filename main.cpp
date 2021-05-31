@@ -3,8 +3,6 @@
 #else
 #include <GL/glut.h>
 #endif
-#include <string.h>
-#include <stdio.h>
 #include "main.hpp"
 #include "rect.hpp"
 
@@ -63,10 +61,10 @@ void change_size(int w, int h)
 	glMatrixMode(GL_MODELVIEW);
 }
 
-void render_screen(void)
+void render_screen(void) //TODO: Make a struct for vector2's
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
+	
 	Rect *r1 = new Rect(0.5, 0.5, 0.5, 0.5, 1);
 	Rect *r2 = new Rect(-0.5, -0.5, 0.5, 0.5, 1);
 	Rect *r3 = new Rect(0.5, -0.5, 0.5, 0.5, 1);

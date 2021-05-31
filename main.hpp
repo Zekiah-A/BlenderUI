@@ -3,8 +3,6 @@
 #else
 #include <GL/glut.h>
 #endif
-#include <string.h>
-#include <stdio.h>
 #include "rect.hpp"
 
 class Main
