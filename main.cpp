@@ -6,8 +6,10 @@
 #include "main.hpp"
 #include "rect.hpp"
 #include "checkbox.hpp"
+#include "button.hpp"
 
-void Main::draw_button(float locx, float locy) //add position
+/*
+void Main::draw_toggle(float locx, float locy)
 {
 	glColor3f(1, 1, 1);
 	new Rect(0 + locx, locy, 0.1, 0.05, 1);
@@ -16,6 +18,7 @@ void Main::draw_button(float locx, float locy) //add position
 	glColor3f(0.7, 0.7, 0.7);
 	new Rect(-0.025 + locx, locy, 0.04, 0.04, 1);
 }
+*/
 
 void Main::draw_textbox(float locx, float locy)
 {       //outer design rect
@@ -59,10 +62,10 @@ void render_screen(void) //TODO: Make a struct for vector2's
 	Rect *r3 = new Rect(0.5, -0.5, 0.5, 0.5, 1);
 	Rect *r4 = new Rect(-0.5, 0.5, 0.5, 0.5, 1);
 
-	program.draw_button(0, 0.2);
-	program.draw_button(0.2, 0);
-	program.draw_button(0, -0.2); //TODO: these need classes too
-	program.draw_button(-0.2, 0);
+	Button *b1 = new Button(0, 0.2, 1, true);
+	Button *b2 = new Button(0.2, 0, 1, true);
+	Button *b3 = new Button(0, -0.2, 1, true);
+	Button *b4 = new Button(-0.2, 0, 1, true);
 	
 	Checkbox *c1 = new Checkbox(0.1, 0, 1, false);
 	Checkbox *c2 = new Checkbox(-0.1, 0, 1, true);
