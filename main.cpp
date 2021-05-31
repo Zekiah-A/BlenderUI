@@ -32,6 +32,7 @@ void Main::draw_textbox(float locx, float locy)
 
 void change_size(int w, int h)
 {
+	/*
 	// Prevent a divide by zero, when window is too short
 	// (you cant make a window of zero width).
 	if(h == 0)
@@ -49,9 +50,18 @@ void change_size(int w, int h)
 	glViewport(0, 0, w, h);
 
 	// Set the correct perspective.
-	gluPerspective(45, ratioh /* * ratiow */, 1, 1000); //TODO: add back
+	gluPerspective(45, ratioh, 1, 1000); //TODO: add back * ratiow
 
 	// Get Back to the Modelview
+	glMatrixMode(GL_MODELVIEW);
+	*/
+
+	//TODO: Fix 2d ortho projection
+	glViewport(0, 0, w, h);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	//gluOrtho2D(0, w, h, 0);
+	gluOrtho2D(0, 0, w, h);
 	glMatrixMode(GL_MODELVIEW);
 }
 
@@ -100,4 +110,13 @@ int main(int argc, char **argv)
     return 1;
 }
 
-// gcc Main.cpp -o blender_ui -lGL -lGLU -lglut //TO COMPILE 
+/*
+void reshape(int w, int h)
+{
+  glViewport(0, 0, w, h);
+  glMatrixMode(GL_PROJECTION);
+  glLoadIdentity();
+  gluOrtho2D(0, w, h, 0);
+  glMatrixMode(GL_MODELVIEW);
+}
+ */
