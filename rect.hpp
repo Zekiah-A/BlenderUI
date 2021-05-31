@@ -10,7 +10,7 @@
 class Rect
 {
     public:
-    Rect(float _locx, float _locy, float _sizex, float _sizey, float _zindex); //this ius supposed to be a constructor, not a class
+    Rect(float _locx, float _locy, float _sizex, float _sizey, float _zindex);
     //~Rect();
 
     void set_position(float _locx, float _locy);

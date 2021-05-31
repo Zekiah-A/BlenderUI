@@ -5,6 +5,7 @@
 #endif
 #include "main.hpp"
 #include "rect.hpp"
+#include "checkbox.hpp"
 
 void Main::draw_button(float locx, float locy) //add position
 {
@@ -14,18 +15,6 @@ void Main::draw_button(float locx, float locy) //add position
 	new Rect(0 + locx, locy, 0.09, 0.04, 1);
 	glColor3f(0.7, 0.7, 0.7);
 	new Rect(-0.025 + locx, locy, 0.04, 0.04, 1);
-}
-
-void Main::draw_checkbox(float locx, float locy, bool ischecked)
-{
-	new Rect(locx, locy, 0.06, 0.06, 1);
-
-	if (ischecked == true)
-		glColor3f(0, 1, 0);
-	else
-		glColor3f(1, 0, 0);
-	new Rect(locx, locy, 0.05, 0.05, 1);
-	glColor3f(1, 1, 1);
 }
 
 void Main::draw_textbox(float locx, float locy)
@@ -75,8 +64,8 @@ void render_screen(void) //TODO: Make a struct for vector2's
 	program.draw_button(0, -0.2); //TODO: these need classes too
 	program.draw_button(-0.2, 0);
 	
-	program.draw_checkbox(0.1, 0, false);
-	program.draw_checkbox(-0.1, 0, true);
+	Checkbox *c1 = new Checkbox(0.1, 0, 1, false);
+	Checkbox *c2 = new Checkbox(-0.1, 0, 1, true);
 	
 	program.draw_textbox(0, 0.1);
 

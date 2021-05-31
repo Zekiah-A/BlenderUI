@@ -19,6 +19,7 @@ class Main
 	public:
 	void draw_textbox(float locx, float locy);
 };
+
 Main program;
 
 void change_size(int w, int h);

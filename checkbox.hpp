@@ -7,11 +7,12 @@
 #include <GL/glut.h>
 #endif
 #include <string.h>
+#include "rect.hpp"
 
 class Checkbox
 {
     public:
-	Checkbox(float locx, float locy, float zindex, bool ischecked);
+	Checkbox(float _locx, float _locy, float _zindex, bool _ischecked); //It can't tell that it's a constructor?
 
     void set_position(float _locx, float _locy);
     void set_checked(bool _ischecked);
