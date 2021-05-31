@@ -2,9 +2,9 @@
 echo "Building files"
 #gcc main.cpp main.hpp rect.cpp rect.hpp -o blender_ui -lGL -lGLU -lglut # doesn't work with gcc, wtf
 if  g++ main.cpp main.hpp rect.cpp rect.hpp checkbox.cpp checkbox.hpp -o blender_ui -lGL -lGLU -lglut; then # turn up verbosity
-    echo "Project sucessful built as 'blender_ui', running."
+    echo -e "\e[1;32m Example project sucessfuly built as 'blender_ui', running. \e[0m"
 else
-    echo "Build failed."
+    echo -e "\e[1;31m Build failed. \e[0m"
 fi
 chmod +x blender_ui
 ./blender_ui
