@@ -66,7 +66,7 @@ void render_screen(void) //TODO: Make a struct for vector2's
 	Button *b2 = new Button(0.2, 0, 1, true);
 	Button *b3 = new Button(0, -0.2, 1, true);
 	Button *b4 = new Button(-0.2, 0, 1, true);
-	
+	 //hmm... wacky!
 	Checkbox *c1 = new Checkbox(0.1, 0, 1, false);
 	Checkbox *c2 = new Checkbox(-0.1, 0, 1, true);
 	

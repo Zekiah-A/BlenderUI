@@ -10,11 +10,10 @@
 Button::Button(float _locx, float _locy, float _zindex, bool _ischecked)
 {
 	glColor3f(1, 1, 1);
-	new Rect(0 + locx, locy, 0.1, 0.05, _zindex);
+	new Rect(locx, locy, 0.1, 0.05, _zindex);
 	glColor3f(0.5, 0.5, 0.5);
-	new Rect(0 + locx, locy, 0.09, 0.04, _zindex);
-	glColor3f(0.7, 0.7, 0.7);
-	new Rect(-0.025 + locx, locy, 0.04, 0.04, _zindex); //TODO: Implement "ischecked" here
+	new Rect(locx, locy, 0.09, 0.04, _zindex);
+	//TODO: Implement "ischecked" here
 }
 
 void Button::set_position(float _locx, float _locy)
