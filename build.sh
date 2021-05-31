@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Building files"
 #gcc main.cpp main.hpp rect.cpp rect.hpp -o blender_ui -lGL -lGLU -lglut # doesn't work with gcc, wtf
-if  g++ main.cpp main.hpp rect.cpp rect.hpp -o blender_ui -lGL -lGLU -lglut; then # turn up verbosity
+if  g++ main.cpp main.hpp rect.cpp rect.hpp checkbox.cpp checkbox.hpp -o blender_ui -lGL -lGLU -lglut; then # turn up verbosity
     echo "Project sucessful built as 'blender_ui', running."
 else
     echo "Build failed."

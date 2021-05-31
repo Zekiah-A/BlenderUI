@@ -9,7 +9,7 @@
 
 Checkbox::Checkbox(float _locx, float _locy, float _zindex, bool _ischecked)
 {
-    new Rect(_locx, _locy, 0.06, 0.06, _zindex);
+    new Rect(_locx, _locy, 0.06, 0.06, _zindex); //so bad
     if (_ischecked == true)
         glColor3f(0, 1, 0);
     else
