@@ -7,7 +7,7 @@ Blender UI is a ui library intended to emulate the look of blender's user interf
 It is very simple at the moment.
 
 __Dependencies:__
-> `GLUT` or `FreeGLUT`
+> ~~`GLUT`~~ or `FreeGLUT`
 
 > `OpenGL headers`
 

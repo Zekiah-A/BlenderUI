@@ -1,7 +1,7 @@
 #ifdef __APPLE__
-#include <GLUT/glut.h>
+#include <GLUT/freeglut.h>
 #else
-#include <GL/glut.h>
+#include <GL/freeglut.h>
 #endif
 #include <string>
 #include "rect.hpp"
@@ -12,13 +12,17 @@ Textlabel::Textlabel(float _locx, float _locy, float _zindex, std::string _text)
 	new Rect(_locx, _locy, 0.2, 0.05, 1); //TODO: Implement bitmap text
 	glColor3f(0.7, 0.7, 0.7);
 	new Rect(_locx, _locy, 0.19, 0.04, 1);
-    glRasterPos2f(_locx, _locy);
-    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_10, 97);
-    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_10, 98);
-    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_10, 99);
-    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_10, 100);
-    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_10, 101);
-    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_10, 102);
+    glColor3f(1, 1, 1);
+    glRasterPos2f(_locx - 0.1, _locy - 0.025);
+    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 97);
+    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 98);
+    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 99);
+    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 100);
+    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 101);
+    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 102);
+
+    //glScalef(0.05,0.05,1);
+    //glutStrokeString(GLUT_STROKE_ROMAN, (unsigned char*)"The game over!");
 }
 
 void Textlabel::set_position(float _locx, float _locy)
